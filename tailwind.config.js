@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage : {
+        "app" : "url('/img/fondo_appsalon.jpg')"
+      }
+    },
   },
   plugins: [],
 }
