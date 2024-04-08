@@ -1,5 +1,6 @@
 <script setup>
-
+    import { useServicesStore } from '@/stores/services'
+    const services = useServicesStore()
 </script>
 
 <template>
@@ -7,4 +8,3 @@
         <h1>Desde servicios</h1>
     </div>
 </template>
-
