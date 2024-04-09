@@ -1,9 +1,26 @@
 <script setup>
+    import SelectedService from '@/components/SelectedService.vue'
+import { formatCurrency } from '@/helpers';
+    import { useAppointmentsStore } from '@/stores/appointments'
 
+    const appointments = useAppointmentsStore()
 </script>
 
 <template>
-    <div>
-        <h1>Detalles de la cita</h1>
+    <h2 class="text-4xl font-extrabold text-white">Detalles cita y resumen</h2>
+    <p class="text-white text-lg">A continuación verifica la información y confirma tu cita</p>
+
+    <h3 class="text-3xl font-extrabold text-white">Servicios</h3>
+
+    <div class="grid gap-5">
+        <SelectedService
+            v-for="service in appointments.services"
+            :key="service._id"
+            :service="service"
+        />
+
+        <p class="text-right text-white text-2xl">Total a pagar:
+            <span class="font-black">{{ formatCurrency(appointments.totalAmount) }}</span></p>
     </div>
+
 </template>
