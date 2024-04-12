@@ -1,6 +1,6 @@
 <script setup>
     import SelectedService from '@/components/SelectedService.vue'
-import { formatCurrency } from '@/helpers';
+    import { formatCurrency } from '@/helpers';
     import { useAppointmentsStore } from '@/stores/appointments'
 
     const appointments = useAppointmentsStore()
@@ -12,7 +12,9 @@ import { formatCurrency } from '@/helpers';
 
     <h3 class="text-3xl font-extrabold text-white">Servicios</h3>
 
-    <div class="grid gap-5">
+    <p v-if="appointments.noServicesSelected" class="text-white text-2xl">No hay servicios seleccionados</p>
+
+    <div v-else class="grid gap-5">
         <SelectedService
             v-for="service in appointments.services"
             :key="service._id"
