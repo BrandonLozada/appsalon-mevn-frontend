@@ -1,4 +1,5 @@
 <script setup>
+    import VueTailwindDatepicker from 'vue-tailwind-datepicker'
     import SelectedService from '@/components/SelectedService.vue'
     import { formatCurrency } from '@/helpers';
     import { useAppointmentsStore } from '@/stores/appointments'
@@ -12,7 +13,7 @@
 
     <h3 class="text-3xl font-extrabold text-white">Servicios</h3>
 
-    <p v-if="appointments.noServicesSelected" class="text-white text-2xl">No hay servicios seleccionados</p>
+    <p v-if="appointments.noServicesSelected" class="text-white text-2xl text-center">No hay servicios seleccionados</p>
 
     <div v-else class="grid gap-5">
         <SelectedService
