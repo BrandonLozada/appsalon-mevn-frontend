@@ -14,9 +14,9 @@
 
     const disableDate = (date) => {
         const today = new Date()
-        // true : cuando la fecha es menor a la de hoy
-        // true : cuando el mes de la fecha es mayor al mes actual más otro mes
-        // true : cuando los días domingo y sábado (0 y 6) de la semana sean los de las fechas en el callback
+        // true : cuando la fecha es menor a la de hoy.
+        // true : cuando el mes de la fecha es mayor al mes actual más otro mes.
+        // true : cuando los días domingo y sábado (0 y 6) de la semana sean los de las fechas en el callback.
         return date < today || date.getMonth() > today.getMonth() + 1 || [0,6].includes(date.getDay())
     }
 </script>

@@ -35,8 +35,6 @@ export const useAppointmentsStore = defineStore('appointments', () => {
             time: time.value,
             totalAmount: totalAmount.value
         }
-
-        console.log(appointment);
     }
 
     const isServiceSelected = computed(() => {
