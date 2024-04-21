@@ -11,7 +11,6 @@
     onMounted(async () => {
         try {
             const { data } = await AuthAPI.verifyAccount(token)
-            console.log(data)
             toast.open({
                 message: data.message,
                 type: 'success'
