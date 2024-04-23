@@ -23,7 +23,7 @@ export const useUserStore = defineStore('user', () => {
     }
 
     /*
-    // You cant use the const async function sintaxis.
+    // You can use the const async function sintaxis.
     const signOut = async () => {
         localStorage.removeItem('AUTH_TOKEN')
         user.value = {}
