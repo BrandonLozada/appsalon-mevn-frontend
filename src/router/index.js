@@ -75,6 +75,16 @@ const router = createRouter({
           path: 'iniciar-sesion',
           name: 'sign-in',
           component: () => import('../views/auth/SignInView.vue')
+        },
+        {
+          path: 'olvide-contrasena',
+          name: 'forgot-password',
+          component: () => import('../views/auth/ForgotPasswordView.vue')
+        },
+        {
+          path: 'olvide-contrasena/:token',
+          name: 'new-password',
+          component: () => import('../views/auth/NewPasswordView.vue')
         }
       ]
     }
