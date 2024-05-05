@@ -2,24 +2,27 @@ import api from '@/lib/axios'
 
 export default {
     register(data) {
-        return api.post('auth/register', data)
+        return api.post('/auth/register', data)
     },
     verifyAccount(token) {
-        return api.get(`auth/verify/${token}`)
+        return api.get(`/auth/verify/${token}`)
     },
     signIn(data) {
-        return api.post('auth/sign-in', data)
+        return api.post('/auth/sign-in', data)
     },
     auth() {
-        return api.get('auth/user')
+        return api.get('/auth/user')
+    },
+    admin() {
+        return api.get('/auth/admin')
     },
     forgotPassword(data) {
-        return api.post('auth/forgot-password', data)
+        return api.post('/auth/forgot-password', data)
     },
     verifyPasswordResetToken(token) {
-        return api.get(`auth/forgot-password/${token}`)
+        return api.get(`/auth/forgot-password/${token}`)
     },
     updatePassword(token, data) {
-        return api.post(`auth/forgot-password/${token}`, data)
+        return api.post(`/auth/forgot-password/${token}`, data)
     }
 }
